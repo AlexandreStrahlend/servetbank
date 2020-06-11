@@ -4,6 +4,21 @@ export class Agencia {
 
     numeroAg;
     cidadeSede;
-    clientes;
+    _clientes;
+
+    // Acessores:
+
+    get clientes() {
+        return this._clientes;
+    }
+
+    // Constructor:
+
+    constructor(numeroAg, cidadeSede, clientes) {
+        this.numeroAg = numeroAg;
+        this.cidadeSede = cidadeSede;
+        this._clientes = clientes;
+    }
+
 
 }

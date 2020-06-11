@@ -6,6 +6,20 @@ export class ContaCorrente {
 
     _saldo = 0;
 
+    // Acessores:
+
+    get saldo() {
+        return this._saldo;
+    }
+
+    // Constructor:
+
+    constructor(agecia, numero, saldo) {
+        this.agencia = agecia;
+        this.numero = numero;
+        this._saldo = saldo;
+    }
+
     // Metodos:
 
     sacando(valor) {

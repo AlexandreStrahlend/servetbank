@@ -1,7 +1,7 @@
 {
   "name": "servetbank",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bank structure using Javascript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,5 +9,13 @@
   },
   "author": "Lex_Strahlend",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreStrahlend/servetbank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlexandreStrahlend/servetbank/issues"
+  },
+  "homepage": "https://github.com/AlexandreStrahlend/servetbank#readme"
 }
