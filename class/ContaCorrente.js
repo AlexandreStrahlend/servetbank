@@ -1,6 +1,7 @@
 export class ContaCorrente {
 
     // Atributos:
+    static numeroDeContas = 0;
     agencia;
     numero;
 
@@ -18,6 +19,7 @@ export class ContaCorrente {
         this.agencia = agecia;
         this.numero = numero;
         this._saldo = saldo;
+        ContaCorrente.numeroDeContas += 1;
     }
 
     // Metodos:

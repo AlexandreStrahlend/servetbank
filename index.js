@@ -82,3 +82,4 @@ console.log(contaCorrente1.saldo);
 console.log(cliente1.cpf);
 console.log(agencia1.clientes);
 console.log(banco1);
+console.log(ContaCorrente.numeroDeContas);
