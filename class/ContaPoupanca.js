@@ -1,18 +1,18 @@
-export class ContaCorrente {
+export class ContaPoupanca {
 
     // Atributos Estaticos:
 
-    static numeroDeContasCorrente = 0;
+    static numeroDeContasPoupanca = 0;
 
     // Constructor:
 
-    constructor(agecia, numero, operacao, saldo) {
-        this.agencia = agecia;
+    constructor(agencia, numero, operacao, saldo) {
+        this.agencia = agencia;
         this.numero = numero;
         this.operacao = operacao;
         this._saldo = saldo;
 
-        ContaCorrente.numeroDeContasCorrente += 1;
+        ContaPoupanca.numeroDeContasPoupanca += 1;
     }
 
     // Acessores:

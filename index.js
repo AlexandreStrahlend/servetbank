@@ -4,11 +4,13 @@ import {Cliente} from "./class/Cliente.js";
 import {ContaCorrente} from "./class/ContaCorrente.js";
 import {Banco} from "./class/Banco.js";
 import {Agencia} from "./class/Agencia.js";
+import {ContaPoupanca} from "./class/ContaPoupanca.js";
 
 //----------------------Instancia de Contas-----------------------
 
 const contaCorrente1 = new ContaCorrente(
     1001,
+    1,
     1,
     50
 );
@@ -16,8 +18,16 @@ const contaCorrente1 = new ContaCorrente(
 const contaCorrente2 = new ContaCorrente(
     1001,
     2,
+    1,
     50
 );
+
+const contaPoupanca1 = new ContaPoupanca(
+    1001,
+    1301,
+    13,
+    100
+)
 
 //----------------------Instacia de Clientes-----------------------
 
@@ -78,8 +88,11 @@ contaCorrente2.transferir(35,contaCorrente1);
 contaCorrente1.consultarSaldo()
 contaCorrente2.consultarSaldo()
 
-console.log(contaCorrente1.saldo);
-console.log(cliente1.cpf);
-console.log(agencia1.clientes);
-console.log(banco1);
-console.log(ContaCorrente.numeroDeContas);
+console.log(contaCorrente1);
+console.log(contaCorrente2);
+console.log(contaPoupanca1);
+
+console.log(ContaCorrente.numeroDeContasCorrente);
+console.log(Cliente.numeroDeClientes);
+console.log(Agencia.numeroDeAgencias);
+console.log(ContaCorrente.numeroDeContasCorrente + ContaPoupanca.numeroDeContasPoupanca)

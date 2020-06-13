@@ -1,20 +1,8 @@
 export class Cliente {
 
-    // Atributos:
+    // Atributos Estaticos:
 
-    nome;
-    sobrenome;
-    _cpf;
-    rg;
-    dataNascimento;
-    cidade;
-    contas;
-
-    // Acessores:
-
-    get cpf() {
-        return this._cpf;
-    }
+    static numeroDeClientes = 0;
 
     // Constructor:
 
@@ -26,6 +14,16 @@ export class Cliente {
         this.dataNascimento = dataNascimento;
         this.cidade = cidade;
         this.contas = contas;
+
+        Cliente.numeroDeClientes += 1;
     }
+
+
+    // Acessores:
+
+    get cpf() {
+        return this._cpf;
+    }
+
 
 }

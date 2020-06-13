@@ -1,16 +1,8 @@
 export class Agencia {
 
-    // Atributos:
+    // Atributos Estaticos:
 
-    numeroAg;
-    cidadeSede;
-    _clientes;
-
-    // Acessores:
-
-    get clientes() {
-        return this._clientes;
-    }
+    static numeroDeAgencias = 0;
 
     // Constructor:
 
@@ -18,7 +10,14 @@ export class Agencia {
         this.numeroAg = numeroAg;
         this.cidadeSede = cidadeSede;
         this._clientes = clientes;
+
+        Agencia.numeroDeAgencias += 1;
     }
 
+    // Acessores:
+
+    get clientes() {
+        return this._clientes;
+    }
 
 }
