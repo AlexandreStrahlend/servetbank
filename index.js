@@ -1,10 +1,11 @@
 //----------------------Importacoes-----------------------
 
-import {Cliente} from "./class/Cliente.js";
-import {ContaCorrente} from "./class/ContaCorrente.js";
-import {Banco} from "./class/Banco.js";
-import {Agencia} from "./class/Agencia.js";
-import {ContaPoupanca} from "./class/ContaPoupanca.js";
+import {Cliente} from "./class/Cliente.js"
+import {ContaCorrente} from "./class/ContaCorrente.js"
+import {Banco} from "./class/Banco.js"
+import {Agencia} from "./class/Agencia.js"
+import {ContaPoupanca} from "./class/ContaPoupanca.js"
+import {Conta} from "./class/Conta.js"
 
 //----------------------Instancia de Contas-----------------------
 
@@ -13,20 +14,34 @@ const contaCorrente1 = new ContaCorrente(
     1,
     1,
     50
-);
+)
 
 const contaCorrente2 = new ContaCorrente(
     1001,
     2,
     1,
     50
-);
+)
 
 const contaPoupanca1 = new ContaPoupanca(
     1001,
     1301,
     13,
     100
+)
+
+const contaPoupanca2 = new ContaPoupanca(
+    1001,
+    1302,
+    13,
+    450
+)
+
+const conta1 = new Conta(
+    1001,
+    1,
+    1,
+    0
 )
 
 //----------------------Instacia de Clientes-----------------------
@@ -78,21 +93,27 @@ const banco1 = new Banco(
 
 //----------------------Movimentacoes-----------------------
 
-contaCorrente1.depositar(100);
-contaCorrente2.depositar(300);
+contaCorrente1.depositar(100)
+contaCorrente2.depositar(300)
 
-contaCorrente1.sacar(12);
+contaCorrente1.sacar(12)
 
-contaCorrente2.transferir(35,contaCorrente1);
+contaCorrente2.transferir(35, contaCorrente1)
 
 contaCorrente1.consultarSaldo()
 contaCorrente2.consultarSaldo()
 
-console.log(contaCorrente1);
-console.log(contaCorrente2);
-console.log(contaPoupanca1);
+console.log(contaCorrente1)
+console.log(contaCorrente2)
+console.log(contaPoupanca1)
+console.log(conta1)
 
-console.log(ContaCorrente.numeroDeContasCorrente);
-console.log(Cliente.numeroDeClientes);
-console.log(Agencia.numeroDeAgencias);
+console.log(ContaCorrente.numeroDeContasCorrente)
+console.log(Cliente.numeroDeClientes)
+console.log(Agencia.numeroDeAgencias)
 console.log(ContaCorrente.numeroDeContasCorrente + ContaPoupanca.numeroDeContasPoupanca)
+
+contaCorrente1.depositar(50)
+contaCorrente1.consultarSaldo()
+
+
