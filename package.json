@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/AlexandreStrahlend/servetbank/issues"
   },
-  "homepage": "https://github.com/AlexandreStrahlend/servetbank#readme"
+  "homepage": "https://github.com/AlexandreStrahlend/servetbank#readme",
+  "dependencies": {
+    "node": "^14.8.0"
+  }
 }
