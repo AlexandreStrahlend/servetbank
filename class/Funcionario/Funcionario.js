@@ -27,4 +27,8 @@ export class Funcionario {
 		this._senha = senha
 	}
 
+	autenticar(senha) {
+		return senha === this._senha
+	}
+
 }

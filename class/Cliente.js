@@ -1,30 +1,42 @@
 export class Cliente {
 
-    // Atributos Estaticos:
+	// Atributos Estaticos:
 
-    static numeroDeClientes = 0
+	static numeroDeClientes = 0
 
-    // Constructor:
+	// Constructor:
 
-    constructor(cpf, nome, sobrenome, rg, dataNascimento, cidade, contas) {
-        this._cpf = cpf
+	constructor(cpf, senha, nome, sobrenome, rg, dataNascimento, cidade, contas) {
+		this._cpf = cpf
+		this._senha = senha
 
-        this.nome = nome
-        this.sobrenome = sobrenome
-        this.rg = rg
-        this.dataNascimento = dataNascimento
-        this.cidade = cidade
-        this.contas = contas
-
-        Cliente.numeroDeClientes += 1
-    }
+		this.nome = nome
+		this.sobrenome = sobrenome
+		this.rg = rg
+		this.dataNascimento = dataNascimento
+		this.cidade = cidade
+		this.contas = contas
 
 
-    // Acessores:
+		Cliente.numeroDeClientes += 1
+	}
 
-    get cpf() {
-        return this._cpf
-    }
+
+	// Acessores:
+
+	get cpf() {
+		return this._cpf
+	}
+
+	get senha() {
+		return this._senha
+	}
+
+	// Metodos:
+
+	autenticar(senha) {
+		return senha === this._senha
+	}
 
 
 }

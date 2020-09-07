@@ -52,6 +52,7 @@ const contaSalario1 = new ContaSalario(
 
 const cliente1 = new Cliente(
 	"Ricardo",
+	123456,
 	"Magalhaes",
 	11122233309,
 	12345,
@@ -62,6 +63,7 @@ const cliente1 = new Cliente(
 
 const cliente2 = new Cliente(
 	"Alice",
+	4321,
 	"Silva",
 	44455566609,
 	67890,
@@ -123,6 +125,6 @@ gerente1.cadastrarSenha(998877)
 
 const diretorEstaLogado = SistemaAutenticacao.login(diretor1, 123456789)
 const gerenteEstaLogado = SistemaAutenticacao.login(gerente1, 998877)
+const clienteEstaLogado = SistemaAutenticacao.login(cliente1, 123456)
 
-
-console.log(diretorEstaLogado, gerenteEstaLogado)
+console.log(diretorEstaLogado, gerenteEstaLogado, clienteEstaLogado)
